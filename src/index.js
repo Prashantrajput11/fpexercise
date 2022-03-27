@@ -1,4 +1,6 @@
 console.log("hello");
+
+// Q.no 1
 // const arr = [1, 2, 3, 58, 5, 6, 24, 8, 15, 4];
 
 // const data = arr.map((a) => {
@@ -7,6 +9,7 @@ console.log("hello");
 
 // console.log(data);
 
+// Q.no 2
 // const family = [
 //   {
 //     name: "Tanay",
@@ -38,6 +41,7 @@ console.log("hello");
 
 // console.log(names);
 
+// Q.no 3
 const arr = [1, 2, 3, 58, 5, 6, 24, 8, 15, 4];
 
 const getNum = arr.filter((n) => {
