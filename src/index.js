@@ -89,4 +89,97 @@ const product_output = list_two.reduce((acc, curr) => {
   return acc;
 });
 
-console.log(product_output);
+// console.log(product_output);
+
+// Q. 09
+const fruits = [
+  {
+    name: "Apple"
+  },
+  {
+    name: "Mango"
+  },
+  {
+    name: "Potato"
+  },
+  {
+    name: "Guava"
+  },
+  {
+    name: "Capsicum"
+  }
+];
+
+let fruits_list = fruits.map((fruit) => {
+  if (fruit.name.length > 5) {
+    fruit["type"] = "vegetable";
+  } else {
+    fruit["type"] = "fruit";
+  }
+
+  return fruit;
+});
+
+console.log(fruits_list);
+
+// q.no 7
+
+// const arr = [
+//   {
+//     name: "Jay",
+//     age: 60
+//   },
+//   {
+//     name: "Gloria",
+//     age: 36
+//   },
+//   {
+//     name: "Manny",
+//     age: 16
+//   },
+//   {
+//     name: "Joe",
+//     age: 9
+//   }
+// ];
+
+// Your output should be: 121 /*** 60+36+16+9 ***/
+// let sum_of_ages = persons
+//   .map((person) => {
+//     return person["age"];
+//   })
+//   .reduce((acc, curr) => {
+//     return acc + curr;
+//   });
+
+// console.log(sum_of_ages);
+
+// / Q. no 10
+
+const inventory = [
+  {
+    name: "fans",
+    quantity: 3
+  },
+  {
+    name: "chimneys",
+    quantity: 0
+  },
+  {
+    name: "bulbs",
+    quantity: 5
+  },
+  { name: "stove", quantity: 1 }
+];
+
+// Get all the items in an array whose quantity is less than 2.
+let item_less_then_two = inventory
+  .map((item) => {
+    if (item.quantity < 2) {
+      return item.name;
+    }
+  })
+  .filter((i) => {
+    return i !== undefined;
+  });
+console.log(item_less_then_two);
