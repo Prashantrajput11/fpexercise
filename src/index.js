@@ -50,15 +50,43 @@ const getNum = arr.filter((n) => {
   }
 });
 
-console.log(getNum);
+// console.log(getNum);
 
 // Q.no 4
 // Your output should be: ['repeat']
 
-let words = ["eat", "sleep", "repeat", "code"];
+// let words = ["eat", "sleep", "repeat", "code"];
 
-const wordsMoreThanFive = words.filter((word) => {
-  return word.length > 5;
+// const wordsMoreThanFive = words.filter((word) => {
+//   return word.length > 5;
+// });
+
+// console.log(wordsMoreThanFive);
+
+// q.no 6
+const list = [1, 2, 3, 58, 5, 6, 62, 8, 70];
+
+// Your output should be: 190
+
+const data2 = list.reduce((acc, currVal) => {
+  if (currVal > 50) {
+    return acc + currVal;
+  }
+  return acc;
 });
 
-console.log(wordsMoreThanFive);
+console.log(data2);
+
+//Q.no 7
+const list_two = [1, 2, 3, 7, 5, 6, 8, 9];
+
+// Your output should be: 96
+
+const product_output = list_two.reduce((acc, curr) => {
+  if (curr % 2 == 0) {
+    return acc * curr;
+  }
+  return acc;
+});
+
+console.log(product_output);
