@@ -10,24 +10,24 @@ console.log("hello");
 // console.log(data);
 
 // Q.no 2
-// const family = [
-//   {
-//     name: "Tanay",
-//     haveCycle: true
-//   },
-//   {
-//     name: "Akanksha",
-//     haveCycle: false
-//   },
-//   {
-//     name: "Tanvi",
-//     haveCycle: true
-//   },
-//   {
-//     name: "Kanak",
-//     haveCycle: false
-//   }
-// ];
+const family = [
+  {
+    name: "Tanay",
+    haveCycle: true
+  },
+  {
+    name: "Akanksha",
+    haveCycle: false
+  },
+  {
+    name: "Tanvi",
+    haveCycle: true
+  },
+  {
+    name: "Kanak",
+    haveCycle: false
+  }
+];
 
 // let names = family
 //   .map((member) => {
@@ -182,4 +182,44 @@ let item_less_then_two = inventory
   .filter((i) => {
     return i !== undefined;
   });
-console.log(item_less_then_two);
+// console.log(item_less_then_two);
+
+// Q10 Part b
+let total_items = inventory.reduce((acc, currVal) => {
+  console.log("acc", acc);
+  return acc + currVal["quantity"];
+});
+// console.log("total items in inventory ", total_items);
+
+const data = [
+  {
+    name: "Jay",
+    age: 60
+  },
+  {
+    name: "Gloria",
+    age: 36
+  },
+  {
+    name: "Manny",
+    age: 16
+  },
+  {
+    name: "Joe",
+    age: 16
+  }
+];
+
+// Get distinct elememts
+// { 60:1, 36:1, 16:2}
+
+let output = data.reduce((acc, curr) => {
+  if (acc[curr.age]) {
+    acc[curr.age] = acc[curr.age] + 1;
+  } else {
+    acc[curr.age] = 1;
+  }
+
+  return acc;
+}, {});
+console.log(output);
